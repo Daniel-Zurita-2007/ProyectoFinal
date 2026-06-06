@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Alimentos - Proyecto Final</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Simulador de Crisis Actual</h1>
+        <p>Aplicación web educativa para el análisis contextual</p>
+        <nav>
+            <a href="index.html">Carburantes</a>
+            <a href="index1.html" class="active">Precios Alimentos</a>
+            <a href="index2.html">Costos Transporte</a>
+            <a href="index3.html">Compras Familiares</a>
+            <a href="index4.html">Rumor y Escasez</a>
+            <a href="apart.html">Casos de Estudio</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="context-card">
+            <h2>Escenario B: Simulador de Precios de Alimentos</h2>
+            <p><strong>Contexto del problema:</strong> La inflación de los productos y la especulación alteran de manera directa el valor de la canasta familiar básica, afectando el poder adquisitivo y el gasto del hogar a corto y mediano plazo.</p>
+            <p><strong>Matemáticas Aplicadas:</strong> Se aplican cálculos aritméticos de tasas porcentuales y variaciones absolutas:<br>
+            <code>Incremento Unitario = Precio Actual - Precio Anterior</code><br>
+            <code>Variación Porcentual = (Incremento Unitario / Precio Anterior) * 100</code><br>
+            <code>Sobrecosto Total Absoluto = (Precio Actual - Precio Anterior) * Cantidad Semanal * Semanas</code></p>
+        </section>
+
+        <section class="simulator-grid">
+            <div class="form-container">
+                <h3>Ingreso de Datos</h3>
+                <form id="form-alimentos" onsubmit="event.preventDefault();">
+                    <div class="form-group">
+                        <label for="alimento-nombre">Nombre del Producto:</label>
+                        <input type="text" id="alimento-nombre" placeholder="Ej. Arroz" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="precio-anterior">Precio Anterior (Bs):</label>
+                        <input type="number" id="precio-anterior" step="0.1" placeholder="Ej. 8" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="precio-actual">Precio Actual (Bs):</label>
+                        <input type="number" id="precio-actual" step="0.1" placeholder="Ej. 11" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cantidad-semana">Cantidad Consumida Semanal:</label>
+                        <input type="number" id="cantidad-semana" placeholder="Ej. 2" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="semanas-total">Número de Semanas Proyectadas:</label>
+                        <input type="number" id="semanas-total" placeholder="Ej. 4" min="0" required>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn-calc" id="btn-calcular-b">Calcular Impacto</button>
+                        <button type="reset" class="btn-clear">Limpiar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="results-container">
+                <h3>Resultados de la Simulación</h3>
+                <div id="resultado-alimentos" class="result-box dynamic-normal">
+                    Ingrese los datos numéricos en el formulario y presione el botón de cálculo.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Programación Web I | Conclusiones: Las subidas porcentuales continuas provocan pérdidas del poder adquisitivo obligando a reajustar las porciones de consumo semanal.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

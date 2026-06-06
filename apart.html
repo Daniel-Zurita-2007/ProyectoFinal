@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casos de Estudio - Proyecto Final</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Simulador de Crisis Actual</h1>
+        <p>Sección Autogestionada de Validación de Algoritmos Matemáticos</p>
+        <nav>
+            <a href="index.html">Carburantes</a>
+            <a href="index1.html">Precios Alimentos</a>
+            <a href="index2.html">Costos Transporte</a>
+            <a href="index3.html">Compras Familiares</a>
+            <a href="index4.html">Rumor y Escasez</a>
+            <a href="apart.html" class="active">Casos de Estudio</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="context-card">
+            <h2>Casos de Estudio Oficiales para Pruebas</h2>
+            <p><strong>Descripción:</strong> Esta sección ejecuta de forma automatizada y controlada los conjuntos de datos del documento guía del desafío. Al presionar cada botón, el motor matemático evalúa las variables y renderiza el resultado sin depender de formularios externos.</p>
+        </section>
+
+        <div class="cases-grid">
+            <div class="case-box">
+                <h3>Caso A: Autonomía de Combustible</h3>
+                <table class="table-case">
+                    <tr><th>Parámetro</th><th>Valor Guía</th></tr>
+                    <tr><td>Reserva inicial</td><td>10,000 L</td></tr>
+                    <tr><td>Consumo diario</td><td>1,200 L</td></tr>
+                    <tr><td>Reabastecimiento</td><td>300 L</td></tr>
+                    <tr><td>Límite crítico</td><td>2,000 L</td></tr>
+                </table>
+                <button type="button" class="btn-calc" id="btn-caso-1">Ejecutar Prueba A</button>
+                <div id="res-caso1" class="mini-result"></div>
+            </div>
+
+            <div class="case-box">
+                <h3>Caso B: Inflación de Alimentos</h3>
+                <table class="table-case">
+                    <tr><th>Ítem</th><th>P. Ant.</th><th>P. Act.</th><th>Consumo / Mes</th></tr>
+                    <tr><td>Arroz</td><td>8 Bs</td><td>11 Bs</td><td>10 unidades</td></tr>
+                    <tr><td>Papa</td><td>7 Bs</td><td>10 Bs</td><td>8 unidades</td></tr>
+                    <tr><td>Aceite</td><td>12 Bs</td><td>18 Bs</td><td>4 unidades</td></tr>
+                </table>
+                <button type="button" class="btn-calc" id="btn-caso-2">Ejecutar Prueba B</button>
+                <div id="res-caso2" class="mini-result"></div>
+            </div>
+
+            <div class="case-box">
+                <h3>Caso C: Desvíos de Transporte</h3>
+                <table class="table-case">
+                    <tr><th>Parámetro</th><th>Valor Guía</th></tr>
+                    <tr><td>Distancia normal</td><td>10 Km</td></tr>
+                    <tr><td>Distancia desvío</td><td>16 Km</td></tr>
+                    <tr><td>Costo por Km</td><td>2 Bs</td></tr>
+                    <tr><td>Viajes por Semana</td><td>5 viajes</td></tr>
+                </table>
+                <button type="button" class="btn-calc" id="btn-caso-3">Ejecutar Prueba C</button>
+                <div id="res-caso3" class="mini-result"></div>
+            </div>
+
+            <div class="case-box">
+                <h3>Caso D: Liquidez Familiar</h3>
+                <table class="table-case">
+                    <tr><th>Parámetro</th><th>Valor Guía</th></tr>
+                    <tr><td>Presupuesto familiar</td><td>500 Bs</td></tr>
+                    <tr><td>Monto total de canasta</td><td>580 Bs</td></tr>
+                </table>
+                <button type="button" class="btn-calc" id="btn-caso-4">Ejecutar Prueba D</button>
+                <div id="res-caso4" class="mini-result"></div>
+            </div>
+
+            <div class="case-box">
+                <h3>Caso E: Estrés por Especulación</h3>
+                <table class="table-case">
+                    <tr><th>Parámetro</th><th>Valor Guía</th></tr>
+                    <tr><td>Demanda habitual</td><td>100 unidades</td></tr>
+                    <tr><td>Incremento de pánico</td><td>40%</td></tr>
+                    <tr><td>Stock físico de tienda</td><td>120 unidades</td></tr>
+                </table>
+                <button type="button" class="btn-calc" id="btn-caso-5">Ejecutar Prueba E</button>
+                <div id="res-caso5" class="mini-result"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Programación Web I | Consola Descentralizada de Auditoría Analítica.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

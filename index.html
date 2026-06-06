@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Carburantes - Proyecto Final</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Simulador de Crisis Actual</h1>
+        <p>Aplicación web educativa para el análisis contextual</p>
+        <nav>
+            <a href="index.html" class="active">Carburantes</a>
+            <a href="index1.html">Precios Alimentos</a>
+            <a href="index2.html">Costos Transporte</a>
+            <a href="index3.html">Compras Familiares</a>
+            <a href="index4.html">Rumor y Escasez</a>
+            <a href="apart.html">Casos de Estudio</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="context-card">
+            <h2>Escenario A: Abastecimiento de Carburantes</h2>
+            <p><strong>Contexto del problema:</strong> Ante las dificultades de logística y la alta demanda en el país, las estaciones de servicio operan con reservas limitadas, haciendo crítico calcular el tiempo antes de entrar en zona de desabastecimiento severo o nivel crítico.</p>
+            <p><strong>Matemáticas Aplicadas:</strong> Se realiza un análisis iterativo día por día aplicando de forma matemática lineal la fórmula cíclica: <br>
+            <code>Reserva Final (Día n) = Reserva Inicial + Reabastecimiento Diario - Consumo Diario</code></p>
+        </section>
+
+        <section class="simulator-grid">
+            <div class="form-container">
+                <h3>Ingreso de Datos</h3>
+                <form id="form-carburantes" onsubmit="event.preventDefault();">
+                    <div class="form-group">
+                        <label for="reserva-inicial">Reserva Inicial (Litros):</label>
+                        <input type="number" id="reserva-inicial" placeholder="Ej. 10000" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="consumo-diario">Consumo Diario (Litros):</label>
+                        <input type="number" id="consumo-diario" placeholder="Ej. 1200" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reabastecimiento">Reabastecimiento Diario (Litros):</label>
+                        <input type="number" id="reabastecimiento" placeholder="Ej. 300" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nivel-critico">Nivel Crítico de Reserva (Litros):</label>
+                        <input type="number" id="nivel-critico" placeholder="Ej. 2000" min="0" required>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn-calc" id="btn-calcular-a">Calcular Autonomía</button>
+                        <button type="reset" class="btn-clear">Limpiar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="results-container">
+                <h3>Resultados de la Simulación</h3>
+                <div id="resultado-carburantes" class="result-box dynamic-normal">
+                    Ingrese los datos numéricos en el formulario y presione el botón de cálculo.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Programación Web I | Conclusiones: Los modelos matemáticos predictivos permiten prever las crisis logísticas energéticas antes de alcanzar estados críticos de escasez.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

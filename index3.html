@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Compras - Proyecto Final</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Simulador de Crisis Actual</h1>
+        <p>Aplicación web educativa para el análisis contextual</p>
+        <nav>
+            <a href="index.html">Carburantes</a>
+            <a href="index1.html">Precios Alimentos</a>
+            <a href="index2.html">Costos Transporte</a>
+            <a href="index3.html" class="active">Compras Familiares</a>
+            <a href="index4.html">Rumor y Escasez</a>
+            <a href="apart.html">Casos de Estudio</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="context-card">
+            <h2>Escenario D: Simulador de Compras Familiares</h2>
+            <p><strong>Contexto del problema:</strong> Frente al aumento repentino de precios de primera necesidad, los hogares se enfrentan a problemas de liquidez monetaria inmediata y necesitan optimizar su capital de forma exacta para evitar deudas.</p>
+            <p><strong>Matemáticas Aplicadas:</strong> Operación algebraica básica de sustracción y discriminación condicional binaria (positivo/negativo):<br>
+            <code>Saldo Remanente o Faltante = Presupuesto Disponible - Costo Total de la Compra</code></p>
+        </section>
+
+        <section class="simulator-grid">
+            <div class="form-container">
+                <h3>Ingreso de Datos</h3>
+                <form id="form-compras" onsubmit="event.preventDefault();">
+                    <div class="form-group">
+                        <label for="presupuesto">Presupuesto Líquido Familiar (Bs):</label>
+                        <input type="number" id="presupuesto" placeholder="Ej. 500" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="total-compra">Monto Total Estimado de Compra (Bs):</label>
+                        <input type="number" id="total-compra" placeholder="Ej. 580" min="0" required>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn-calc" id="btn-calcular-d">Verificar Presupuesto</button>
+                        <button type="reset" class="btn-clear">Limpiar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="results-container">
+                <h3>Resultados de la Simulación</h3>
+                <div id="resultado-compras" class="result-box dynamic-normal">
+                    Ingrese los datos numéricos en el formulario y presione el botón de cálculo.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Programación Web I | Conclusiones: El control estricto del flujo de caja evita la insolvencia y la desestabilización crediticia del hogar.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Transporte - Proyecto Final</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Simulador de Crisis Actual</h1>
+        <p>Aplicación web educativa para el análisis contextual</p>
+        <nav>
+            <a href="index.html">Carburantes</a>
+            <a href="index1.html">Precios Alimentos</a>
+            <a href="index2.html" class="active">Costos Transporte</a>
+            <a href="index3.html">Compras Familiares</a>
+            <a href="index4.html">Rumor y Escasez</a>
+            <a href="apart.html">Casos de Estudio</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="context-card">
+            <h2>Escenario C: Simulador de Costo de Transporte</h2>
+            <p><strong>Contexto del problema:</strong> Bloqueos viales, conflictos sociales o mantenimiento vial obligan al transporte de pasajeros y de carga a usar rutas alternas extensas, lo que incrementa el costo operativo y tarifario final.</p>
+            <p><strong>Matemáticas Aplicadas:</strong> Multiplicación escalar aplicada sobre funciones de variancia de distancias:<br>
+            <code>Diferencia de Recorrido = Distancia con Desvío - Distancia Normal</code><br>
+            <code>Sobrecosto Semanal = Diferencia de Recorrido * Costo por Kilómetro * Viajes por Semana</code></p>
+        </section>
+
+        <section class="simulator-grid">
+            <div class="form-container">
+                <h3>Ingreso de Datos</h3>
+                <form id="form-transporte" onsubmit="event.preventDefault();">
+                    <div class="form-group">
+                        <label for="distancia-normal">Distancia Normal de Ruta (Km):</label>
+                        <input type="number" id="distancia-normal" placeholder="Ej. 10" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="distancia-desvio">Distancia con Desvío (Km):</label>
+                        <input type="number" id="distancia-desvio" placeholder="Ej. 16" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="costo-km">Costo Operativo por Kilómetro (Bs):</label>
+                        <input type="number" id="costo-km" step="0.1" placeholder="Ej. 2" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="viajes-semana">Viajes realizados por Semana:</label>
+                        <input type="number" id="viajes-semana" placeholder="Ej. 5" min="0" required>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn-calc" id="btn-calcular-c">Calcular Costos</button>
+                        <button type="reset" class="btn-clear">Limpiar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="results-container">
+                <h3>Resultados de la Simulación</h3>
+                <div id="resultado-transporte" class="result-box dynamic-normal">
+                    Ingrese los datos numéricos en el formulario y presione el botón de cálculo.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Programación Web I | Conclusiones: Los desvíos geográficos imprevistos actúan directamente como un multiplicador crítico sobre la cadena logística comercial.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
